@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans), system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-display), Georgia, serif;
+  
+  --color-gold-50: #fcf9f2;
+  --color-gold-100: #f7eedb;
+  --color-gold-200: #eddcb7;
+  --color-gold-300: #dfc38a;
+  --color-gold-400: #cea35d;
+  --color-gold-500: #c8a165; /* Base Accent Gold */
+  --color-gold-600: #b4854b;
+  --color-gold-700: #96673b;
+  --color-gold-800: #7a5132;
+  --color-gold-900: #64412a;
+  
+  --color-luxury-beige: #e8dccb;
+  --color-dark-charcoal: #1f1f1f;
+  --color-rich-black: #111111;
+  --color-soft-white: #fafafa;
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px rgba(200, 161, 101, 0.3);
+  }
+  
+  .glassmorphism {
+    background: rgba(17, 17, 17, 0.75);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(200, 161, 101, 0.15);
+  }
+  
+  .glassmorphism-light {
+    background: rgba(250, 250, 250, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(200, 161, 101, 0.1);
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, #c8a165 0%, #b4854b 50%, #96673b 100%);
+  }
+  
+  .charcoal-gradient {
+    background: linear-gradient(135deg, #1f1f1f 0%, #111111 100%);
+  }
+
+  .beige-gradient {
+    background: linear-gradient(135deg, #fafafa 0%, #e8dccb 100%);
+  }
+
+  .scrollbar-none {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+}
+
+/* Custom styles */
+html {
+  scroll-behavior: smooth;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+body {
+  background-color: #fafafa;
+  color: #1f1f1f;
+}
+
+/* Scrollbar configuration */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c8a165;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b4854b;
+}
+
+/* Marquee continuous scroll animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}

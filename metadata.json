@@ -1,0 +1,6 @@
+{
+  "name": "North Western Innovators",
+  "description": "Premium luxury interior design, architecture, and MEP engineering firm in Chandigarh, India. Transform spaces into timeless masterpieces.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
