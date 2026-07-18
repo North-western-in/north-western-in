@@ -25,7 +25,7 @@ export default function Footer() {
           {/* Column 1: Brand & Bio */}
           <div className="flex flex-col space-y-5">
             <Link href="/" className="flex items-center group focus:outline-none" id="footer-logo">
-              <Logo size={48} className="text-white hover:opacity-95 transition-all" />
+              <Logo size={48} className="hover:opacity-95 transition-all" />
             </Link>
             <p className="text-sm text-gray-400 font-light leading-relaxed">
               We translate client visions into breathtaking physical realities. Chandigarh&apos;s premium design house for luxury residential, sophisticated commercial, institutional architecture, and high-end MEP designing.

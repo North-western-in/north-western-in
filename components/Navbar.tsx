@@ -56,7 +56,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between lg:gap-4 xl:gap-8">
             {/* Logo */}
             <Link href="/" className="flex items-center group focus:outline-none" id="nav-logo">
-              <Logo size={42} className="text-white hover:opacity-95 transition-all" />
+              <Logo size={42} className="hover:opacity-95 transition-all" />
             </Link>
 
             {/* Desktop Navigation */}

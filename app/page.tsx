@@ -1029,8 +1029,8 @@ export default function HomePage() {
       </section>
 
       {/* 15. CALL TO ACTION & CONTACT FORM SECTION */}
-      <section id="contact-section" className="py-24 bg-rich-black text-white border-t border-gold-500/10 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="contact-section" className="pt-24 pb-16 bg-rich-black text-white border-t border-gold-500/10 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             {/* Left Form: Details */}
             <div className="lg:col-span-5 space-y-8">
@@ -1095,43 +1095,6 @@ export default function HomePage() {
                       Monday – Saturday: 9:30 AM to 6:30 PM (Sunday Closed)
                     </p>
                   </div>
-                </div>
-              </div>
-
-              {/* Interactive Embedded Map */}
-              <div className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden shadow-2xl group">
-                <div className="p-4 border-b border-white/10 flex items-center justify-between bg-white/[0.02]">
-                  <div className="flex items-center gap-2">
-                    <Compass className="text-gold-500 animate-spin-slow" size={18} />
-                    <span className="text-[11px] font-mono tracking-wider text-gold-400 uppercase font-semibold">
-                      Atelier Coordinate
-                    </span>
-                  </div>
-                  <a
-                    href="https://www.google.com/maps/place/NORTH+WESTERN+INNOVATORS/@30.7230103,76.7656369,17.03z/data=!4m14!1m7!3m6!1s0x390fed30f696b629:0x8035d22f6ef6606e!2sNORTH+WESTERN+INNOVATORS!8m2!3d30.7230055!4d76.7681479!16s%2Fg%2F11pkxjv6v4!3m5!1s0x390fed30f696b629:0x8035d22f6ef6606e!8m2!3d30.7230055!4d76.7681479!16s%2Fg%2F11pkxjv6v4?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-[10px] text-gold-500 hover:text-gold-400 font-mono tracking-wider uppercase font-semibold flex items-center gap-1 transition-colors"
-                  >
-                    Open in Google Maps ↗
-                  </a>
-                </div>
-                <div className="relative w-full h-72 sm:h-80 bg-rich-black">
-                  <iframe
-                    src="https://maps.google.com/maps?q=SCO%2096-97,%20Sector%2034A,%20Chandigarh&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen={false}
-                    loading="lazy"
-                    referrerPolicy="no-referrer"
-                    title="North Western Innovators Headquarters Chandigarh Map"
-                    className="w-full h-full opacity-85 hover:opacity-100 grayscale hover:grayscale-0 contrast-[1.1] brightness-[0.85] hover:brightness-100 transition-all duration-700"
-                  />
-                </div>
-                <div className="p-4 bg-white/[0.02] flex items-center justify-between text-[11px] text-gray-400 border-t border-white/10 font-mono">
-                  <span>📍 Adjacent Piccadily Mall</span>
-                  <span className="text-gray-500">30.7143° N, 76.7681° E</span>
                 </div>
               </div>
             </div>
@@ -1231,10 +1194,10 @@ export default function HomePage() {
                     onChange={(e) => setContactForm({ ...contactForm, budget: e.target.value })}
                     className="w-full bg-[#1A1A1A] border border-white/10 rounded px-4 py-3 text-xs focus:outline-none focus:border-gold-500 transition-all text-white cursor-pointer"
                   >
-                    <option value="Bespoke Elite">Bespoke Elite (&gt; 1 Cr INR)</option>
-                    <option value="Ultra Luxury">Ultra Luxury (50L - 1 Cr INR)</option>
-                    <option value="Premium">Premium (25L - 50L INR)</option>
-                    <option value="Classic High-End">Classic High-End (&lt; 25L INR)</option>
+                    <option value="Bespoke Elite">&gt; 1 Cr INR</option>
+                    <option value="Ultra Luxury">50L - 1 Cr INR</option>
+                    <option value="Premium">25L - 50L INR</option>
+                    <option value="Classic High-End">&lt; 25L INR</option>
                   </select>
                 </div>
 
@@ -1260,6 +1223,65 @@ export default function HomePage() {
                   <ArrowRight size={14} />
                 </button>
               </form>
+            </div>
+          </div>
+        </div>
+
+        {/* Full-width Map Block inside a luxury padded wrapper with custom outer gaps */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16" id="full-width-map-container">
+          <div className="border border-white/10 rounded-2xl overflow-hidden relative bg-white/[0.01] shadow-2xl">
+            {/* Floating badge for tablet and desktop views */}
+            <div className="absolute top-6 left-6 sm:left-12 z-10 bg-rich-black/90 backdrop-blur border border-gold-500/20 rounded-lg p-5 max-w-xs shadow-2xl hidden sm:block">
+              <div className="flex items-center gap-2 mb-2">
+                <Compass className="text-gold-500 animate-spin-slow" size={18} />
+                <span className="text-[11px] font-mono tracking-wider text-gold-400 uppercase font-semibold">
+                  Atelier Coordinate
+                </span>
+              </div>
+              <h4 className="font-display text-white font-bold text-xs uppercase mb-1">
+                NWI Chandigarh Studio
+              </h4>
+              <p className="text-[11px] text-gray-400 font-light mb-3 leading-relaxed">
+                SCO 96-97, 2nd Floor, Sector 34A, Sector 34, Chandigarh – 160022
+              </p>
+              <a
+                href="https://www.google.com/maps/place/NORTH+WESTERN+INNOVATORS/@30.7230103,76.7656369,17.03z/data=!4m14!1m7!3m6!1s0x390fed30f696b629:0x8035d22f6ef6606e!2sNORTH+WESTERN+INNOVATORS!8m2!3d30.7230055!4d76.7681479!16s%2Fg%2F11pkxjv6v4!3m5!1s0x390fed30f696b629:0x8035d22f6ef6606e!8m2!3d30.7230055!4d76.7681479!16s%2Fg%2F11pkxjv6v4?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 text-[10px] text-gold-500 hover:text-gold-400 font-mono tracking-wider uppercase font-semibold transition-colors"
+              >
+                Open in Google Maps ↗
+              </a>
+            </div>
+
+            <div className="w-full h-[280px] sm:h-[360px] md:h-[400px]">
+              <iframe
+                src="https://maps.google.com/maps?q=SCO%2096-97,%20Sector%2034A,%20Chandigarh&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer"
+                title="North Western Innovators Headquarters Chandigarh Map"
+                className="w-full h-full opacity-80 hover:opacity-100 grayscale hover:grayscale-0 contrast-[1.15] brightness-[0.8] hover:brightness-100 transition-all duration-700"
+              />
+            </div>
+
+            {/* Map Footer Bar on small screens */}
+            <div className="sm:hidden p-4 bg-white/[0.02] border-t border-white/10 flex flex-col gap-2 font-mono text-[11px] text-gray-400">
+              <div className="flex items-center justify-between">
+                <span>📍 SCO 96-97, Sec 34A</span>
+                <span className="text-gray-500">30.7143° N, 76.7681° E</span>
+              </div>
+              <a
+                href="https://www.google.com/maps/place/NORTH+WESTERN+INNOVATORS/@30.7230103,76.7656369,17.03z/data=!4m14!1m7!3m6!1s0x390fed30f696b629:0x8035d22f6ef6606e!2sNORTH+WESTERN+INNOVATORS!8m2!3d30.7230055!4d76.7681479!16s%2Fg%2F11pkxjv6v4!3m5!1s0x390fed30f696b629:0x8035d22f6ef6606e!8m2!3d30.7230055!4d76.7681479!16s%2Fg%2F11pkxjv6v4?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noreferrer"
+                className="text-center text-[10px] text-gold-500 hover:text-gold-400 tracking-wider uppercase font-semibold border border-gold-500/30 rounded py-2 mt-1"
+              >
+                Open in Google Maps ↗
+              </a>
             </div>
           </div>
         </div>
